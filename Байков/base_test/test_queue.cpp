@@ -35,6 +35,5 @@ TEST(Queue, can_get_next_task_from_queue) {
 TEST(Queue, throws_when_getting_task_from_empty_queue) {
     Queue queue;
 
-    // Проверяем, что при попытке получить задачу из пустой очереди выбрасывается исключение
     EXPECT_THROW(queue.getNextTask(), std::runtime_error);  // Ожидаем исключение типа std::runtime_error
 }

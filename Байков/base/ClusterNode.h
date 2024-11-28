@@ -1,21 +1,21 @@
 #ifndef CLUSTERNODE_H
 #define CLUSTERNODE_H
 
-// Класс узла кластера
+
 class ClusterNode {
 public:
-    bool isBusy;  // Занят ли узел
-    int remainingTime;  // Оставшееся время выполнения задачи
+    bool isBusy; 
+    int remainingTime;  
 
     ClusterNode() : isBusy(false), remainingTime(0) {}
 
-    // Назначить задачу на узел
+
     void assignTask(int duration) {
         isBusy = true;
         remainingTime = duration;
     }
 
-    // Обработка такта
+
     void processTick() {
         if (isBusy) {
             remainingTime--;
